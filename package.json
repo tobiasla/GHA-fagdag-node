@@ -1,0 +1,16 @@
+{
+  "name": "gha-fagdag-node",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "main": "src/{index.js,functions/*.js}"
+}

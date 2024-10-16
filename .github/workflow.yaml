@@ -1,0 +1,53 @@
+on:
+  push:
+    branches:
+      - "main"
+
+env:
+  AZURE_FUNCTIONAPP_NAME: "github-fagdag-xxx-xxx" # For Oppgave 8: Sett inn navn på din egen Azure function app
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: "." # Function app path (denne trenger du ikke endre)
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Sjekk ut koden"
+        uses: actions/checkout@v4
+
+      # Oppgave 3: Sette opp riktig  node versjon før bygging
+      - name: Setup Node Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Oppgave 4: Bygge koden:
+      - name: npm install
+        run: npm ci
+
+      # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
+      - name: Run tests
+        run: npm test
+
+      # Oppgave 6: List ut nuget dependencies med sårbarheter.
+      # Feiler ikke jobben dersom den finner noe,
+      # (Men det er mulig å sette opp)
+      #      - name: Check for vulnerable nuget dependencies
+      #        run: dotnet list package --vulnerable
+
+      # Oppgave 7: Installer dotnet format verktøyet
+      #      - name: Install dotnet-format tool
+      #        run: dotnet tool install -g dotnet-format
+
+      # Oppgave 7: Kjør linting (dotnet format verktøyet) for å sjekke kode formatering.
+      # Feiler jobben dersom noen lint feil blir funnet
+      #      - name: Run lint (dotnet format tool)
+      #        run: dotnet format --verify-no-changes
+
+      # Oppgave 8: Deploy step, sett navnet på din function app, i env.AZURE_FUNCTIONAPP_NAME
+      # Og legg publish profile i en Github secret med navn AZURE_FUNCTIONAPP_PUBLISH_PROFILE
+      - name: "Deploy til Azure Functions app"
+        uses: Azure/functions-action@v1
+        with:
+          app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+          package: "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output"
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
