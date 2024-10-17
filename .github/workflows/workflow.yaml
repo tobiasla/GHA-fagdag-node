@@ -4,7 +4,7 @@ on:
       - "main"
 
 env:
-  AZURE_FUNCTIONAPP_NAME: "github-fagdag-marius" # For Oppgave 8: Sett inn navn på din egen Azure function app
+  AZURE_FUNCTIONAPP_NAME: "githubactions-fagdag-marius" # For Oppgave 8: Sett inn navn på din egen Azure function app
   AZURE_FUNCTIONAPP_PACKAGE_PATH: "." # Function app path (denne trenger du ikke endre)
 
 jobs:
