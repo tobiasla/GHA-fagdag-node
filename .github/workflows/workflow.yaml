@@ -34,7 +34,7 @@ jobs:
 
       # Oppgave 7: Kjør linting
       - name: Run lint (dotnet format tool)
-        run: npm lint
+        run: npm run lint
 
       # Oppgave 8: Deploy step, sett navnet på din function app, i env.AZURE_FUNCTIONAPP_NAME
       # Og legg publish profile i en Github secret med navn AZURE_FUNCTIONAPP_PUBLISH_PROFILE
