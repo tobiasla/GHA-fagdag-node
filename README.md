@@ -35,13 +35,12 @@ Dette skal vi forsøke å finne ved hjelp Github actions `steps`, og fikse med n
 5. Legg til en action som kjører unit testene i prosjektet. (`npm test`)
    1. Dersom den klarte å kjøre testene, var det noe som feilet?
    2. Kan du lage en ny commit med kode-endringer som fikser feilen, og se om testene nå blir grønne (får "Passed") i Github actions?
-6. Legg til en action som utfører såbarhets sjekk av Nuget pakker i prosjektet. (`dotnet list package --vulnerable`)
-   1. Sjekk loggen til jobben på Github, var det noen Nuget pakker sårbarheter?
-7. Legg til en action som installerer "dotnet format" verktøyet: `dotnet tool install -g dotnet-format`
-   1. Legg til en ny action som bruker dotnet format til å Linte koden: `dotnet format --verify-no-changes`
-   2. Sjekk loggen til jobben på Github, var det noen Lint feil?
-   3. Kan du lage en ny commit som fikser Lint feilen i koden?
+6. Legg til en action som utfører såbarhets sjekk av npm pakker i prosjektet. (`npm audit`)
+   1. Sjekk loggen til jobben på Github, var det noen pakker med sårbarheter?
+   2. Oppdater sårbarhetene
+7. Legg til en action som linter koden med eslint. (HINT: `npm init @eslint/config@latest` for å legge til eslint)
+   1. Legg til eslint
+   2. Legg til en ny action som bruker eslint til å linte koden
+   3. Sjekk loggen til jobben på Github, var det noen Lint feil?
+   4. Fiks eventuele feil
 8. Siste oppgave (type: Stor oppgave): Å Deploye koden til en Azure Function app! Se egen readme fil: [azure-oppsett.md](azure-oppsett.md)
-
-- For oppgave 4 til 7, trenger vi bare steps som kjører `dotnet` kommandoer på kommandolinjen (ingen tredje parts actions).
-- Oppgave 5, 6 eller 7 kan skippes, dersom du har problemer med en av de (bare kommenter ut eller fjern de fra workflow filen), eller vil forsøke å deploye til Azure.
