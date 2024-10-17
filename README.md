@@ -1,6 +1,6 @@
-#Github actions Fagdag - C# .net core prosjekt
+# Github actions Fagdag - node prosjekt
 
-Dette git repoet inneholder en liten C# .net core solution, med en Azure Function app, og et lite Test prosjekt.
+Dette git repoet inneholder et lite node prosjekt, med en Azure Function app, og et lite Test prosjekt.
 
 I Github, kan du trykke "Fork", for å lage din egen kopi av repoet, til din egen brukerkonto.
 Da kan du sette opp og kjøre Github Actions, ved å endre på `.github/workflows/workflow.yaml` filen.
