@@ -23,16 +23,20 @@ jobs:
       # Oppgave 4: Installere dependencies
       - name: npm install
         run: npm ci
+        env:
+          CI: true
 
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
       - name: Run tests
         run: npm test
+        env:
+          CI: true
 
       # Oppgave 6: List ut nuget dependencies med sårbarheter.
       # Feiler ikke jobben dersom den finner noe,
       # (Men det er mulig å sette opp)
-      #      - name: Check for vulnerable nuget dependencies
-      #        run: dotnet list package --vulnerable
+      - name: Audit packages
+        run: npm audit
 
       # Oppgave 7: Installer dotnet format verktøyet
       #      - name: Install dotnet-format tool
