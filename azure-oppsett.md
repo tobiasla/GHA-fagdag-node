@@ -24,27 +24,28 @@ Ja, mange steg, men ikke vær redd, det går fort.
 
 Steg 2:
 
-![alt text](docs/2.png)
+![image](https://github.com/user-attachments/assets/82913ab8-c2f7-4115-a6c1-08af7965322f)
 
 Steg 3.1:
 
-![alt text](docs/3.1.png)
+![image](https://github.com/user-attachments/assets/a12bcc84-a05d-4e0c-87b0-355ad6b10f60)
 
 Steg 3.3 - 3.5:
 
-![alt text](docs/3.3.png)
+![image](https://github.com/user-attachments/assets/981ba310-7457-40e6-aaa5-59f6f77131de)
 
 Steg 3.7:
 
-![alt text](docs/3.7-scm-basic-publishing.png)
+![image](https://github.com/user-attachments/assets/3f0c7718-4968-4321-aa12-c22c25f35979)
 
 Steg 4:
 
-![alt text](docs/4.png)
+![image](https://github.com/user-attachments/assets/6d37d91e-dd7e-402d-a0f9-e060ab69e7a9)
 
 Steg 5:
 
-![alt text](docs/5-secrets.png)
+![image](https://github.com/user-attachments/assets/cfadb46c-4f5e-4411-a5c3-65595fc5e6db)
+
 
 Steg 9:
 
