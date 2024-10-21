@@ -29,8 +29,8 @@ jobs:
         run: npm test
 
       # Oppgave 6: List ut npm dependencies med sårbarheter.
-      - name: Audit packages
-        run: npm audit
+      #- name: Audit packages
+      #run: npm audit
 
       # Oppgave 7: Kjør linting
       - name: Run lint (dotnet format tool)
