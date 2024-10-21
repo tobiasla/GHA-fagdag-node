@@ -4,7 +4,7 @@ on:
       - "main"
 
 env:
-  AZURE_FUNCTIONAPP_NAME: "githubactions-fagdag-marius" # For Oppgave 8: Sett inn navn på din egen Azure function app
+  AZURE_FUNCTIONAPP_NAME: "githubactions-xxx-xxx" # For Oppgave 8: Sett inn navn på din egen Azure function app
   AZURE_FUNCTIONAPP_PACKAGE_PATH: "." # Function app path (denne trenger du ikke endre)
 
 jobs:
@@ -21,29 +21,27 @@ jobs:
           node-version: 20
 
       # Oppgave 4: Installere dependencies
-      - name: npm install
-        run: npm ci
+      # - name: npm install
 
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
-      - name: Run tests
-        run: npm test
+      #- name: Run tests
 
       # Oppgave 6: List ut npm dependencies med sårbarheter.
       #- name: Audit packages
       #run: npm audit
 
       # Oppgave 7: Kjør linting
-      - name: Run lint (dotnet format tool)
-        run: npm run lint
+      #- name: Run lint (eslint)
 
       # Oppgave 8: Deploy step, sett navnet på din function app, i env.AZURE_FUNCTIONAPP_NAME
       # Og legg publish profile i en Github secret med navn AZURE_FUNCTIONAPP_PUBLISH_PROFILE
-      - name: "Deploy til Azure Functions app"
-        uses: Azure/functions-action@v1
-        with:
-          app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          package: "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}"
-          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+      #- name: "Deploy til Azure Functions app"
+      #  uses: Azure/functions-action@v1
+      #  with:
+      #    app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+      #    package: "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}"
+      #    publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
 
+      # Lag fint testresultat i github actions
       - name: Publish Test Summary Results
         run: npx github-actions-ctrf ctrf/ctrf-report.json

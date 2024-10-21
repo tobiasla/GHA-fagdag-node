@@ -46,7 +46,6 @@ Steg 5:
 
 ![image](https://github.com/user-attachments/assets/cfadb46c-4f5e-4411-a5c3-65595fc5e6db)
 
-
 Steg 9:
 
 ![alt text](docs/9.png)
