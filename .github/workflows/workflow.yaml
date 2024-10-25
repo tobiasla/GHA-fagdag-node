@@ -22,7 +22,7 @@ jobs:
 
       # Oppgave 4: Installere dependencies
       - name: npm install
-        run: npm i
+        run: npm ci
 
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
       - name: Run tests
@@ -30,7 +30,7 @@ jobs:
 
       # Oppgave 6: List ut npm dependencies med sårbarheter.
       - name: Audit packages
-        run: npm audit fix
+        run: npm audit fix --force
 
       # Oppgave 7: Kjør linting
       - name: Run lint (eslint)
