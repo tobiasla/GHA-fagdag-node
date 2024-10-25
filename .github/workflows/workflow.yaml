@@ -30,7 +30,7 @@ jobs:
 
       # Oppgave 6: List ut npm dependencies med sårbarheter.
       - name: Audit packages
-        run: npm audit
+        run: npm audit fix
 
       # Oppgave 7: Kjør linting
       - name: Run lint (eslint)
